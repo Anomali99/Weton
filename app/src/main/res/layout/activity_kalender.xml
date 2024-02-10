@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KalenderActivity">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="177dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/header"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/footer"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/icon_kalender"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/panah_kembali"
+                android:id="@+id/btn_back"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/info"
+                android:id="@+id/btn_info"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/tabel"
+                android:id="@+id/btn_tabel"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/panduan"
+                android:id="@+id/btn_manual"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/txt_kalender"
+            android:layout_marginTop="10dp"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/kalender1"
+                        android:id="@+id/iv_kalender_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/kalender2"
+                        android:id="@+id/iv_kalender_2"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_kalender_1"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_kalender_1"
+                        app:layout_constraintStart_toStartOf="@+id/iv_kalender_1"
+                        app:layout_constraintTop_toTopOf="@+id/iv_kalender_1"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/kalender3"
+                        android:id="@+id/iv_kalender_3"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_kalender_2"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_kalender_2"
+                        app:layout_constraintStart_toStartOf="@+id/iv_kalender_2"
+                        app:layout_constraintTop_toTopOf="@+id/iv_kalender_2"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/tersier"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Putar Bulan" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="0"
+                        android:textColor="@color/tersier"
+                        android:layout_margin="5dp"
+                        android:id="@+id/tv_sd_1"
+                        />
+
+                    <com.google.android.material.slider.Slider
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"
+                        android:valueFrom="0"
+                        android:valueTo="34"
+                        android:id="@+id/sd_1"
+                        app:labelBehavior="gone"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:text="-"
+                        android:id="@+id/btn_min_bulan"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:text="+"
+                        android:id="@+id/btn_plus_bulan"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Putar Tahun"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/tersier"
+                    android:gravity="center"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_sd_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_margin="5dp"
+                        android:text="0"
+                        android:textColor="@color/tersier"/>
+
+                    <com.google.android.material.slider.Slider
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"
+                        android:valueFrom="0"
+                        android:valueTo="34"
+                        android:id="@+id/sd_2"
+                        app:labelBehavior="gone"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:text="-"
+                        android:id="@+id/btn_min_tanggal"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:text="+"
+                        android:id="@+id/btn_plus_tanggal"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

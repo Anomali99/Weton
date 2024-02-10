@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Weton</string>
+    <string name="tentang_app">
+        Weton adalah aplikasi sederhana untuk menghitung neptu dan kecocokan seseorang.
+        Aplikasi ini hanya sebuah kegabutan belaka, jadi jangan sampai terlalu dipercaya.
+    </string>
+</resources>
